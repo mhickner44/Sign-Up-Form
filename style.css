@@ -6,6 +6,7 @@
 html {
   height: 100%;
   width: 100%;
+  font-family: sans-serif;
 }
 body {
   display: grid;
@@ -69,6 +70,13 @@ div {
   background-color: #f9fafb;
 }
 
+/* .block1,.block2,
+.block3{
+display: block;
+width: 100%;
+height: 100%;
+} */
+
 .block1 {
   font-weight: 600;
   font-family: sans-serif;
@@ -82,9 +90,39 @@ div {
   margin: 4em 2em;
   /* margin-right: 16em; */
   font-size: 2vh;
+  width: 75ch;
 }
+
+.formWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  width: auto;
+  height: auto;
+
+  margin-right: 7rem;
+  border: #596d48 3px solid;
+}
+.formWrapper div,h1 {
+  margin: 2rem 2rem;
+}
+
+input,
+label {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 2rem;
  
+
+}
 
 .italics {
   font-style: italic;
+}
+
+a {
+  color: #596d48;
+  text-decoration: none;
+  font-weight: 600;
 }
