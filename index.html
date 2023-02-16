@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="script" src="script.js" defer>
   </head>
   <body>
     <div class="leftBlock">
@@ -34,33 +35,31 @@
     </div>
     <div class="block2">
       <!-- form page -->
-      <h1>Let's do it!</h1>
+      <h1>Let's do this!</h1>
       <form action="" method="post">
-        <div class="formWrapper">
-          <div>
-            <label for="fName">FIRST NAME</label>
-            <input type="text" id="fName" name="First Name" required />
-          </div>
-          <div>
-            <label for="lName">LAST NAME</label>
-            <input type="text" id="lName" name="Last Name" required />
-          </div>
-          <div>
-            <label for="email">EMAIL</label>
-            <input type="text" id="email" name="email" required />
-          </div>
-          <div>
-            <label for="phoneNum">PHONE NUMBER</label>
-            <input type="text" id="phoneNum" name="phoneNum" required />
-          </div>
-          <div>
-            <label for="password">PASSWORD</label>
-            <input type="text" id="password" name="password" required />
-          </div>
-          <div>
-            <label for="confirmPwd">CONFIRM PASSWORD</label>
-            <input type="text" id="confirmPwd" name="confirmPwd" required />
-          </div>
+        <div>
+          <label for="fName">FIRST NAME</label>
+          <input type="text" id="fName" name="First Name" required />
+        </div>
+        <div>
+          <label for="lName">LAST NAME</label>
+          <input type="text" id="lName" name="Last Name" required />
+        </div>
+        <div >
+          <label for="email">EMAIL</label>
+          <input type="email" id="email" name="email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required />
+        </div>
+        <div>
+          <label for="phoneNum">PHONE NUMBER</label>
+          <input type="text" id="phoneNum" name="phoneNum" pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"required />
+        </div>
+        <div class="passwordWrapper">
+          <label for="password">PASSWORD</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div>
+          <label for="confirmPwd">CONFIRM PASSWORD</label>
+          <input type="password" id="confirmPwd" name="confirmPwd" required />
         </div>
       </form>
     </div>

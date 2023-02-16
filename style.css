@@ -100,18 +100,22 @@ body {
   background-color: white;
 }
 
-.formWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 2rem;
-  width: 90%;
+form {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  width: 80%;
   height: 80%;
-  max-width: 800px;
+
+  margin-left: 2em;
+  max-width: 900px;
 }
-
-
-.formWrapper div {
-  margin-right: 2rem;
+.passwordWrapper::after {
+  content: "* Passwords do not match";
+  color: red;
+  font-size: 0.8em;
 }
 
 h1 {
@@ -123,7 +127,7 @@ label {
   display: flex;
   flex-direction: column;
   height: 25px;
-  width: 200px;
+  width: 80%;
   font-size: 1rem;
   font-weight: 700;
   color: #585858;
@@ -135,24 +139,31 @@ input {
   border-radius: 4px;
 }
 
-input:focus {
+input:valid {
   outline: none;
   box-shadow: 2px 2px 5px black;
   border: 2px solid #0080ff;
 }
 
-input:invalid:focus{
+input:invalid:focus {
   outline: none;
   box-shadow: 2px 2px 5px black;
   border: 2px solid red;
 }
 
-input:valid{
+input:invalid:focus {
+  outline: none;
+  box-shadow: 2px 2px 5px black;
+  border: 2px solid red;
+}
+
+
+
+input:valid:focus {
   outline: none;
   box-shadow: 2px 2px 5px black;
   border: 2px solid lightgreen;
 }
-
 
 .italics {
   font-style: italic;
