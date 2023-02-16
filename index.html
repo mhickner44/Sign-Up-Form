@@ -35,39 +35,43 @@
     <div class="block2">
       <!-- form page -->
       <h1>Let's do it!</h1>
-      <div class="formWrapper">
-        <div>
-          <label for="fName">FIRST NAME</label>
-          <input type="text" id="fName" name="First Name" />
+      <form action="" method="post">
+        <div class="formWrapper">
+          <div>
+            <label for="fName">FIRST NAME</label>
+            <input type="text" id="fName" name="First Name" required />
+          </div>
+          <div>
+            <label for="lName">LAST NAME</label>
+            <input type="text" id="lName" name="Last Name" required />
+          </div>
+          <div>
+            <label for="email">EMAIL</label>
+            <input type="text" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="phoneNum">PHONE NUMBER</label>
+            <input type="text" id="phoneNum" name="phoneNum" required />
+          </div>
+          <div>
+            <label for="password">PASSWORD</label>
+            <input type="text" id="password" name="password" required />
+          </div>
+          <div>
+            <label for="confirmPwd">CONFIRM PASSWORD</label>
+            <input type="text" id="confirmPwd" name="confirmPwd" required />
+          </div>
         </div>
-        <div>
-          <label for="lName">LAST NAME</label>
-          <input type="text" id="lName" name="Last Name" />
-        </div>
-        <div>
-          <label for="email">EMAIL</label>
-          <input type="text" id="email" name="email" />
-        </div>
-        <div>
-          <label for="phoneNum">PHONE NUMBER</label>
-          <input type="text" id="phoneNum" name="phoneNum" />
-        </div>
-        <div>
-          <label for="password">PASSWORD</label>
-          <input type="text" id="password" name="password" />
-        </div>
-        <div>
-          <label for="confirmPwd">CONFIRM PASSWORD</label>
-          <input type="text" id="confirmPwd" name="confirmPwd" />
-        </div>
-      </div>
+      </form>
     </div>
     <div class="block3">
-      <button>Create account</button>
-      <p>
-        Already haver an account?
-        <a href="https://www.youtube.com/watch?v=eBGIQ7ZuuiU">Log in</a>
-      </p>
+      <div class="accCreate">
+        <button class="createAcc">Create account</button>
+        <p>
+          Already haver an account?
+          <a href="https://www.youtube.com/watch?v=eBGIQ7ZuuiU">Log in</a>
+        </p>
+      </div>
     </div>
   </body>
 </html>
