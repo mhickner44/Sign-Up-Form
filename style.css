@@ -91,7 +91,6 @@ body {
 
 .block1 p {
   margin: 4em 1em;
-  /* margin-right: 16em; */
   font-size: 2vh;
   width: 75ch;
 }
@@ -112,10 +111,8 @@ form {
   margin-left: 2em;
   max-width: 900px;
 }
-.passwordWrapper::after {
-  content: "* Passwords do not match";
-  color: red;
-  font-size: 0.8em;
+.errorMessage{
+color: red;
 }
 
 h1 {
@@ -145,24 +142,22 @@ input:valid {
   border: 2px solid #0080ff;
 }
 
+.postInput:invalid {
+  outline: none;
+  box-shadow: 2px 2px 5px black;
+  border: 2px solid red;
+} 
+
 input:invalid:focus {
   outline: none;
   box-shadow: 2px 2px 5px black;
   border: 2px solid red;
 }
-
-input:invalid:focus {
-  outline: none;
-  box-shadow: 2px 2px 5px black;
-  border: 2px solid red;
-}
-
-
 
 input:valid:focus {
   outline: none;
   box-shadow: 2px 2px 5px black;
-  border: 2px solid lightgreen;
+  border: 2px solid green;
 }
 
 .italics {
