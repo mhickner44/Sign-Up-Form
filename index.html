@@ -36,7 +36,7 @@
     <div class="block2">
       <!-- form page -->
       <h1>Let's do this!</h1>
-      <form action="" method="post">
+      <form id="accountForm" action="http://httpbin.org/post" method="post">
         <div>
           <label for="fName">FIRST NAME</label>
           <input type="text" id="fName" name="First Name" required />
@@ -74,13 +74,11 @@
           <label for="confirmPwd">CONFIRM PASSWORD</label>
           <input type="password" id="confirmPwd" name="confirmPwd" required />
         </div>
-        <input type="submit" id="submit-form" class="hidden" />
       </form>
     </div>
     <div class="block3">
       <div class="accCreate">
-        <label for="submit-form" tabindex="0">Submit</label>
-        <button class="createAcc">Create account</button>
+        <button class="createBtn" type="submit" form="accountForm">Create Account</button>
         <p>
           Already haver an account?
           <a href="https://www.youtube.com/watch?v=eBGIQ7ZuuiU">Log in</a>
