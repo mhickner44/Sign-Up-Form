@@ -5,7 +5,6 @@ const inputs = document.querySelectorAll("input[type=text]");
 
 function matchPasswords() {
   if (password.value == confirmPassword.value) {
-    //validate the field and get rid of password messaeg
     password.style.cssText = "border: 2px solid green; ";
     confirmPassword.style.cssText = " border: 2px solid green; ";
     errorMessage.textContent = "";

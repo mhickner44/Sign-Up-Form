@@ -3,24 +3,23 @@
   src: url(font/Norse-Bold.otf);
 }
 
-
 html {
   height: 100%;
   width: 100%;
   font-family: sans-serif;
 }
 body {
+  height: 100%;
+  width:100%;
   display: grid;
-  grid-template-columns: 35vw 65vw;
-  grid-template-rows: repeat(3, 33.1vh);
+  grid-template-columns: 35% 65%;
+  grid-template-rows: repeat(3, minmax(300px,1fr));
   margin: 0;
   padding: 0;
   background-color: #f9fafb;
+  overflow: scroll;
 }
-/* div {
-  width: 100%;
-  height: 100%;
-} */
+
 .leftBlock,
 .block1,
 .block2,
@@ -29,6 +28,17 @@ body {
 .wrapper {
   width: 100%;
   height: 100%;
+
+}
+
+.leftBlock,
+.block1,
+.block2,
+.block3,
+.wrapper
+{
+  min-height: 300px;
+ 
 }
 .leftBlock {
   grid-row: 1/4;
@@ -76,6 +86,7 @@ body {
 }
 
 .block1 {
+
   font-weight: 600;
   font-family: sans-serif;
   width: 100%;
@@ -85,11 +96,14 @@ body {
 }
 
 .block1 p {
+  position: absolute;
   margin: 4em 1em;
-  font-size: 2vh;
-  width: 75ch;
+  font-size:max(1.6vh,20px);
+
+  word-wrap: normal;
 }
 .block2 {
+
   box-shadow: 0px 5px 10px #888888;
   background-color: white;
 }
@@ -105,13 +119,16 @@ form {
 
   margin-left: 2em;
   max-width: 900px;
+
 }
-.errorMessage{
-color: red;
+.errorMessage {
+  color: red;
 }
 
 h1 {
-  margin-left: 2rem;
+ 
+  margin: .5rem 2rem;
+
 }
 
 input,
@@ -141,7 +158,7 @@ input:valid {
   outline: none;
   box-shadow: 2px 2px 5px black;
   border: 2px solid red;
-} 
+}
 
 input:invalid:focus {
   outline: none;
@@ -165,7 +182,16 @@ a {
   font-weight: 600;
 }
 
+
+.accCreate {
+   position:absolute;
+   margin-left: 7% ;
+   margin-top: 4%;
+
+}
+
 .createBtn {
+  position: relative;
   background-color: #596d48;
   border-radius: 5px;
   color: white;
@@ -175,8 +201,30 @@ a {
   font-size: large;
   font-weight: 700;
   margin-bottom: 1rem;
+  
 }
 
-.accCreate {
-  margin: 4rem 2rem;
+
+@media (max-width: 900px) {
+  body {
+    grid-template-columns: 100vw;
+    grid-template-rows: 25vh;
+    min-height:1200px ;
+    overflow: scroll;
+  }
+  .leftBlock,
+  .block1,
+  .block2,
+  .block3 {
+    height: 25vh;
+  }
+  .innerWrapper{
+    height: 30%;
+    transform: translateY(100%);
+  }
+  .innerWrapper h1 {
+    font-size: 7.5rem;
+
+  }
+
 }
